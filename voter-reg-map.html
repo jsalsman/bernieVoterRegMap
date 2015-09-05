@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bernie Sanders Campaign Voter Registration Drive Map</title>
+  <link rel="stylesheet" href="jquery-jvectormap-2.0.4.css" type="text/css" media="screen"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+  <script src="jquery-jvectormap-2.0.4.min.js"></script>
+  <script src="jquery-jvectormap-us-mill.js"></script>
+  <script src="voter-reg-links.js"></script>
+</head>
+<body>
+  <div id="us-map" style="width: 600px; height: 400px"></div>
+  <script>
+    function link_em_to(e, code) {
+      if (code.substring(3,5) in voter_reg_links) {
+        window.location.href = voter_reg_links[code.substring(3,5)];
+      } else {
+        alert("Sorry, there are no instructions for " + code.substring(3,5));
+      }
+    }
+    $(function(){
+        $('#us-map').vectorMap({onRegionClick:link_em_to});
+    });
+  </script>
+</body>
+</html>
