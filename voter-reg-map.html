@@ -19,7 +19,9 @@
       }
     }
     $(function(){
-        $('#us-map').vectorMap({onRegionClick:link_em_to});
+        $('#us-map').vectorMap({ 
+          onRegionClick: link_em_to, 
+          regionStyle: {initial: {stroke: 'green', "stroke-width": 0.3}}
     });
   </script>
 </body>
