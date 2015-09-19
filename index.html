@@ -19,7 +19,10 @@
       }
     }
     $(function(){
-        $('#us-map').vectorMap({onRegionClick:link_em_to});
+        $('#us-map').vectorMap({ 
+          onRegionClick: link_em_to, 
+          regionStyle: {initial: {stroke: 'green'}}
+        });
     });
   </script>
   <p><a href="http://github.com/jsalsman/bernieVoterRegMap">Source: github.com/jsalsman/bernieVoterRegMap</a></p>
